@@ -21,8 +21,8 @@ const DeleteTodo = ({_id}) => {
             alert("הקורס בשימוש")
         }
 
-    }, [erorr])
-    
+    }, [error])
+
     const accept = () => {
         //  toast.current.show({ severity: 'info', summary: 'Confirmed', detail: 'You have deleted' });
 

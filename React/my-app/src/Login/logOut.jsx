@@ -34,7 +34,7 @@ const LogOut = () => {
         if (isSuccess) {
             dispatch(setToken(data))
             setMyUser(user)
-            navigate('/')
+            navigate('/home')
             window.location.reload(false)
         }
     }, [isSuccess])

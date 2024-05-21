@@ -100,7 +100,7 @@ const NewUser = (props) => {
                                 <label htmlFor={field.name}>
                                     תעודת זהות
                                 </label>
-                                <InputText inputId={field.name} value={field.value} onChange={field.onChange} inputRef={field.ref} className={classNames({ 'p-invalid': fieldState.error })} />
+                                <InputText type='text' inputId={field.name} value={field.value} onChange={field.onChange} inputRef={field.ref} className={classNames({ 'p-invalid': fieldState.error })} />
                                 {getFormErrorMessage(field.name)}
                             </>
                         )}
@@ -113,7 +113,7 @@ const NewUser = (props) => {
                                 <label htmlFor="ab">
                                     כתובת מייל
                                 </label>
-                                <InputText inputId={field.name} value={field.value} onChange={field.onChange} inputRef={field.ref} />
+                                <InputText type='email' inputId={field.name} value={field.value} onChange={field.onChange} inputRef={field.ref} />
                             </>
                         )}
                     />
@@ -127,7 +127,7 @@ const NewUser = (props) => {
                                 <label htmlFor={field.name}>
                                     פלאפון
                                 </label>
-                                <InputText inputId={field.name} value={field.value} onChange={field.onChange} inputRef={field.ref} className={classNames({ 'p-invalid': fieldState.error })} />
+                                <InputText type='tel' inputId={field.name} value={field.value} onChange={field.onChange} inputRef={field.ref} className={classNames({ 'p-invalid': fieldState.error })} />
                                 {getFormErrorMessage(field.name)}
 
                             </>
@@ -156,7 +156,7 @@ const NewUser = (props) => {
                                 <label htmlFor="ae">
                                     פלאפון נוסף
                                 </label>
-                                <InputText inputId={field.name} value={field.value} onChange={field.onChange} inputRef={field.ref} />
+                                <InputText type='tel' inputId={field.name} value={field.value} onChange={field.onChange} inputRef={field.ref} />
 
                             </>
                         )}

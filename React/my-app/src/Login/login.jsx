@@ -37,7 +37,7 @@ const userToken=FromToken()
         if (isSuccess) {
             dispatch(setToken(data))
             setMyUser(userToken)
-            navigate('/')
+            navigate('/home')
             window.location.reload(false);
         }
     }, [isSuccess])

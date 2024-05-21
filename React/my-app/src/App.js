@@ -11,6 +11,7 @@ import DisConnection from './Login/disConnection';
 import MyCourseList from './MyCourses/myCoursesList';
 import DetailCourse from './Course/detailCourse';
 import SetCourse from './Course/setCourses';
+import HomePage from './commen/HomePage';
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
         <Router>
           <Routes>
             <Route path='/' element={<Layout />}>
-              <Route index element={<h1>Home Page</h1>} />
+              <Route path='/home' element={<HomePage/>} />
               <Route path='/users' element={<UserList />} />
               <Route path='/courses' element={<CourseList />} />
               <Route path='/Login' element={<Login />} />

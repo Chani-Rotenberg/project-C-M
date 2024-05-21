@@ -150,7 +150,7 @@ const NewCourse = (props) => {
                                 <label htmlFor="ab">
                                     יום בשבוע
                                 </label>
-                                <InputText inputId={field.name} value={field.value} onChange={field.onChange} inputRef={field.ref} />
+                                <InputText type='week' inputId={field.name} value={field.value} onChange={field.onChange} inputRef={field.ref} />
                             </>
                         )}
                     />

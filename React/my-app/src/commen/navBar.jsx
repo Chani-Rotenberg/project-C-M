@@ -6,9 +6,9 @@ import { Chip } from 'primereact/chip';
 import FromToken from '../fromToken';
 
 
-const TemplateDemo=()=> {
+const TemplateDemo = () => {
 
-const user=FromToken()
+    const user = FromToken()
     const itemRenderer = (item) => (
         <a className="flex align-items-center p-menuitem-link">
             <span className={item.icon} />
@@ -19,76 +19,75 @@ const user=FromToken()
     );
     const items = [
         {
-            label: 'Home',
+            label: 'דף הבית',
             icon: 'pi pi-home',
-            url:"/"
+            url: "/"
         },
         {
             label: 'קורסים',
             icon: 'pi pi-star',
-            url:"/courses"
+            url: "/courses"
         },
         {
             label: 'הקורסים שלי',
             icon: 'pi pi-home',
-            url:"/MyCourses"
+            url: "/MyCourses"
         },
         {
             label: 'ניתוק',
             icon: 'pi pi-home',
-            url:"/DisConnection"
+            url: "/DisConnection"
         }
     ];
 
     const items2 = [
         {
-            label: 'Home',
+            label: 'דף הבית',
             icon: 'pi pi-home',
-            url:"/"
+            url: "/"
         },
         {
             label: 'קורסים',
             icon: 'pi pi-star',
-            url:"/setCourses"
+            url: "/setCourses"
         },
         {
             label: 'משתמשים',
             icon: 'pi pi-star',
-            url:"/users"
+            url: "/users"
         },
-        
+
         {
             label: 'ניתוק',
             icon: 'pi pi-home',
-            url:"/DisConnection"
+            url: "/DisConnection"
         },
     ];
 
     const items3 = [
         {
-            label: 'Home',
+            label: 'דף הבית',
             icon: 'pi pi-home',
-            url:"/"
+            url: "/"
         },
         {
             label: 'כניסת משתמש',
             icon: 'pi pi-star',
-            url:"/login"
+            url: "/login"
         },
     ];
-    
+
     const start = <img alt="logo" src="http://localhost:1122/logo.gif" height="40" className="mr-2"></img>;
     const end = (
         <div className="flex align-items-center gap-2">
-            <InputText placeholder="Search" type="text" className="w-8rem sm:w-auto" />
-           {user._id? <Chip label={user.name}/>:<></>}
+            {/* <InputText placeholder="Search" type="text" className="w-8rem sm:w-auto" /> */}
+            {user._id ? <Chip label={user.name} /> : <></>}
         </div>
     );
     return (
         <div className="card">
-            <Menubar model={user._id?(user.roles==="Admin"? items2:items):items3} start={start} end={end} />
+            <Menubar model={user._id ? (user.roles === "Admin" ? items2 : items) : items3} start={start} end={end} />
         </div>
     )
 }
 export default TemplateDemo
-        
