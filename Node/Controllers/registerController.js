@@ -38,7 +38,7 @@ const createNewRegister = async (req, res) => {//*
     const { user, course, registerDate, paid } = req.body
     const register = await Register.find({ user: req.user._id }, { course: 1 }).populate("course").lean();
     register.map((c) => {
-        if (c.course._id.toString() === course) {
+        if (c.course?._id.toString() === course) {
             flag=true
         }
     })

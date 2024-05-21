@@ -41,10 +41,10 @@ const MyCourseList = () => {
 
     const accept = () => {
         sure()
-        toast.current.show({ severity: 'info', summary: 'Confirmed', detail: 'You have accepted', life: 3000 });
+        toast.current.show({ severity: 'info', summary: 'מחיקה', detail: 'נמחק בהצלחה', life: 3000 });
     }
     const reject = () => {
-        toast.current.show({ severity: 'warn', summary: 'Rejected', detail: 'You have rejected', life: 3000 });
+        toast.current.show({ severity: 'warn', summary: 'ביטול', detail: 'לא השתנו הנתונים', life: 3000 });
     }
 
 
@@ -61,8 +61,9 @@ const MyCourseList = () => {
                 <div className="p-4 border-1 surface-border surface-card border-round">
                     <div className="flex flex-wrap align-items-center justify-content-between gap-2">
                     </div>
+                    {console.log(course)}
                     <div className="flex flex-column align-items-center gap-3 py-5">
-                        {course.course.image ? <img className="w-9 shadow-2 border-round" src={`http://localhost:1122/uploads/${course.course.image?.split("\\")[2]}`} alt={course.course.name} /> : <></>}
+                        {course.course.image ? <img className="w-9 shadow-2 border-round" src={`http://localhost:1155/uploads/${course.course.image?.split("\\")[2]}`} alt={course.course.name} /> : <></>}
                         <div className="text-2xl font-bold">{course.course.name}</div>
                         <span className="font-semibold">{course.course.describe}</span>
                         {course.course.lecturer ? <div className="text-2xl font-bold">מרצה: {course.course.lecturer}</div> : ''}

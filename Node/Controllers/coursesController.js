@@ -81,10 +81,22 @@ const updateCourse = async (req, res) => {
     if (!_id || !name) {
         return res.status(400).json({ message: " _id or name not found" })
     }
-    const course_check = await Course.find({ code }).lean()
-
-    if (course_check?.length)
+    // const course_check = await Course.find({ code }).lean()
+    const course_check = await Course.findById(_id).lean()
+    if(course_check.code!=code)
+    {
+       const course_check1 = await Course.find({ code }).lean()
+       if (course_check1?.length)
         return res.status(400).json({ message: 'קיים קורס עם קוד זה' })
+    }
+
+    if(course_check.name!=name)
+    {
+       const course_check1 = await Course.find({ name }).lean()
+       if (course_check1?.length)
+        return res.status(400).json({ message: 'קיים קורס עם שם זה' })
+    }
+    
     const course = await Course.findById(_id).exec()
 
     course.name = name

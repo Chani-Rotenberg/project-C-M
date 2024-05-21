@@ -50,7 +50,7 @@ const DetailCourse = () => {
     };
 
     const reject = () => {
-        toast.current.show({ severity: 'warn', summary: 'Rejected', detail: 'You have rejected', life: 3000 });
+        // toast.current.show({ severity: 'warn', summary: 'Rejected', detail: 'You have rejected', life: 3000 });
     };
 
     const showTemplate = (event) => {
@@ -78,7 +78,7 @@ const DetailCourse = () => {
             <h1>DetailCourse</h1>
             {location.state?.id}
             <h1>{course.name}</h1>
-            <img src={`http://localhost:1122/uploads/${course?.image?.split("\\")[2]}`}></img>
+            <img src={`http://localhost:1155/uploads/${course?.image?.split("\\")[2]}`}></img>
             <h1>{course.describe}</h1>
             <h1>{course.lecturer}</h1>
             <h1>{course.day}</h1>

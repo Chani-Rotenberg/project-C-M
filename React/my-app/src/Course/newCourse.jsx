@@ -68,7 +68,7 @@ const NewCourse = (props) => {
     };
 
     const show = () => {
-        toast.current.show({ severity: 'success', summary: 'Form Submitted', detail: "gggg" });
+        // toast.current.show({ severity: 'success', summary: 'Form Submitted', detail: "gggg" });
     };
 
     const handleFileChange = (event) => {
@@ -150,7 +150,7 @@ const NewCourse = (props) => {
                                 <label htmlFor="ab">
                                     יום בשבוע
                                 </label>
-                                <InputText type='week' inputId={field.name} value={field.value} onChange={field.onChange} inputRef={field.ref} />
+                                <InputText inputId={field.name} value={field.value} onChange={field.onChange} inputRef={field.ref} />
                             </>
                         )}
                     />

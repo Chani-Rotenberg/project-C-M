@@ -4,8 +4,7 @@ const apiSlice = createApi({
     reducerPath: 'api',
     baseQuery: fetchBaseQuery({
         baseUrl:
-            // 'http://localhost:1122/',
-            'http://localhost:1123/',
+             'http://localhost:1155/',
             
         credentials:'include',
         prepareHeaders:(headers,{getState})=>{

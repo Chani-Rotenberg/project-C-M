@@ -34,10 +34,10 @@ const CourseList = () => {
         return (
             <div className="col-12" key={courses.code}>
                 <div className={classNames('flex flex-column xl:flex-row xl:align-items-start p-4 gap-4', { 'border-top-1 surface-border': index !== 0 })}>
-                {console.log(`http://localhost:1122/uploads/${courses?.image?.split("\\")[2]}`)}
+                {console.log(`http://localhost:1155/uploads/${courses?.image?.split("\\")[2]}`)}
                 <h1>{courses.image.split("\\")[2]}</h1>
 
-                    {courses.image ? <img alt={courses.name} className="w-9 sm:w-16rem xl:w-10rem shadow-2 block xl:block mx-auto border-round" src={`http://localhost:1122/uploads/${courses.image.split("\\")[2]}`}></img> : ''}
+                    {courses.image ? <img alt={courses.name} className="w-9 sm:w-16rem xl:w-10rem shadow-2 block xl:block mx-auto border-round" src={`http://localhost:1155/uploads/${courses.image.split("\\")[2]}`}></img> : ''}
                     <div className="flex flex-column sm:flex-row justify-content-between align-items-center xl:align-items-start flex-1 gap-4">
                         <div className="flex flex-column align-items-center sm:align-items-start gap-3">
                             <div className="text-2xl font-bold text-900">{courses.name}</div>
@@ -64,7 +64,7 @@ const CourseList = () => {
                     
 
                         
-                        {courses.image ? <img className="w-9 shadow-2 border-round" src={`http://localhost:1122/uploads/${courses?.image?.split("\\")[2]}`} alt={courses.name} /> : ''}
+                        {courses.image ? <img className="w-9 shadow-2 border-round" src={`http://localhost:1155/uploads/${courses?.image?.split("\\")[2]}`} alt={courses.name} /> : ''}
                         <div className="text-2xl font-bold">{courses.name}</div>
                         <span className="font-semibold">{courses.describe}</span>
                     </div>

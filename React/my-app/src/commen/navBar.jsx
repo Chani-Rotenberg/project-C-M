@@ -21,7 +21,7 @@ const TemplateDemo = () => {
         {
             label: 'דף הבית',
             icon: 'pi pi-home',
-            url: "/"
+            url: "/home"
         },
         {
             label: 'קורסים',
@@ -44,7 +44,7 @@ const TemplateDemo = () => {
         {
             label: 'דף הבית',
             icon: 'pi pi-home',
-            url: "/"
+            url: "/home"
         },
         {
             label: 'קורסים',
@@ -68,7 +68,7 @@ const TemplateDemo = () => {
         {
             label: 'דף הבית',
             icon: 'pi pi-home',
-            url: "/"
+            url: "/home"
         },
         {
             label: 'כניסת משתמש',
@@ -77,7 +77,7 @@ const TemplateDemo = () => {
         },
     ];
 
-    const start = <img alt="logo" src="http://localhost:1122/logo.gif" height="40" className="mr-2"></img>;
+    const start = <img alt="logo" src="http://localhost:1155/logo.gif" height="40" className="mr-2"></img>;
     const end = (
         <div className="flex align-items-center gap-2">
             {/* <InputText placeholder="Search" type="text" className="w-8rem sm:w-auto" /> */}
