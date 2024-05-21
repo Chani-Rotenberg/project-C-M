@@ -14,6 +14,15 @@ const DeleteTodo = ({_id}) => {
             toast.current.show({ severity: 'success', summary: 'Success', detail: `You have deleted ` });
         }
     }, [isSuccess])
+
+    useEffect(() => {
+        if(isError){
+            console.log(isError);
+            alert("הקורס בשימוש")
+        }
+
+    }, [erorr])
+    
     const accept = () => {
         //  toast.current.show({ severity: 'info', summary: 'Confirmed', detail: 'You have deleted' });
 
