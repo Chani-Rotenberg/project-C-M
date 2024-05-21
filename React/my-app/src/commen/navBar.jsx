@@ -30,12 +30,12 @@ const TemplateDemo = () => {
         },
         {
             label: 'הקורסים שלי',
-            icon: 'pi pi-home',
+            icon: 'pi pi-star',
             url: "/MyCourses"
         },
         {
             label: 'ניתוק',
-            icon: 'pi pi-home',
+            icon: 'pi-directions',
             url: "/DisConnection"
         }
     ];
@@ -59,7 +59,7 @@ const TemplateDemo = () => {
 
         {
             label: 'ניתוק',
-            icon: 'pi pi-home',
+            icon: 'pi-directions',
             url: "/DisConnection"
         },
     ];
