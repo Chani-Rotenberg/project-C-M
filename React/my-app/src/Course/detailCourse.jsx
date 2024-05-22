@@ -75,8 +75,6 @@ const DetailCourse = () => {
     };
     return (
         <div>
-            <h1>DetailCourse</h1>
-            {location.state?.id}
             <h1>{course.name}</h1>
             <img src={`http://localhost:1155/uploads/${course?.image?.split("\\")[2]}`}></img>
             <h1>{course.describe}</h1>
